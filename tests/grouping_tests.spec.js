@@ -11,7 +11,8 @@ test.describe("Smoke Tests", () => {
     test('Clicking test @smoke', async ({page}) => {
         await page.goto("https://the-internet.herokuapp.com");
         await page.locator("text=Add/Remove Elements").click();
-        await page.pause()
+        const locator1 = page.locator('text=Add/Remove Elements');
+        await locator1.screenshot({path: "screenshot2.png"});
         await page.locator("text=Add Element").click();
     })
 });
