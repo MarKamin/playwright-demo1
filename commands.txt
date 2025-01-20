@@ -1,0 +1,6 @@
+1. npm playwirght test //running tests
+2. npm playwright test tests/[name of the file for ex. example.spec.js] --headed //run a specific test
+*in Playwright, the --headed flag is used to run tests with a visible browser UI instead of running them 
+in headless mode, which is the default behavior.
+
+3.2. npm playwright test tests/[file] --headed --browser=firefox // with different browser
