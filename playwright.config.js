@@ -1,13 +1,15 @@
 const {PlaywrightTestConfig} = require('@playwright/test')
 
 const config = {
-    retries: 1,
+    retries: 0,
     timeout: 5000,
     use: {
+        baseURL: "https://the-internet.herokuapp.com",
         headless: false,
         viewport: {width: 1200, height: 720},
         video: "off",
-        screenshot: "off",
+        screenshot: "only-on-failure",
+        headless: true, // Ensures tests run headlessly
     },
 
     projects: [
@@ -15,12 +17,11 @@ const config = {
             name: 'Chrome',
             use: {browserName: 'chromium'}
         },
-        {
-            name: 'Firefox',
-            use: {browserName: 'firefox'}
-        },
-    ]
-
+        // {
+        //     name: 'Firefox',
+        //     use: {browserName: 'firefox'}
+        // },
+    ],
 }
 
 module.exports = config;

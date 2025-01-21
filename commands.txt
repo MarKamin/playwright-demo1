@@ -4,3 +4,5 @@
 in headless mode, which is the default behavior.
 
 3.2. npm playwright test tests/[file] --headed --browser=firefox // with different browser
+
+npm run test:chrome // for runnning package.json script
