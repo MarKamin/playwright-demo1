@@ -11,3 +11,9 @@ With reporter:
 npx playwright test tests/parallel_mode.spec.js --reporter=line
 npx playwright test tests/grouping_tests.spec.js --reporter=dot
 npx playwright test tests/grouping_tests.spec.js --reporter=html
+
+For authentication checking, saving session id to a file: 
+npx playwright codegen --save-storage=auth.json https://practice.expandtesting.com/login
+
+Opens webpage with previous cookies used for loggin in, and opens page already logged in:
+npx playwright codegen --load-storage=auth.json https://practice.expandtesting.com/login
